@@ -75,4 +75,9 @@ So it seems simple right?
 ### Next Steps
 With all that out of the way, let's start our journey by choosing the right tools for our development cycle and getting our local dev environment set up.
 
+{{< figure
+    src="tools_everywhere.png"
+    alt="Choosing the right tools"
+>}}
+
 This might sound trivial but we will begin using [Skaffold](https://skaffold.dev/) in the next section so our dev environment will mimic more closely our production deployment.

@@ -87,3 +87,8 @@ We have everything we need to begin our journey. Let's be clear about the first 
 - Deploy these two microservices to our local K8S cluster
 
 Let's cover these in the next step.
+
+{{< figure
+    src="hacking.png"
+    alt="hacking"
+>}}
