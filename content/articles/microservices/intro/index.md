@@ -15,6 +15,12 @@ Welcome to this introduction to distributed architecture and microservices in .N
 
 This is mainly a resource to chronicle the decisions I have made, provide some archive to document steps to reproduce, and to share this knowledge with my future self who will likely need it.
 
+{{< figure
+    src="architect_2.png"
+    alt="Architect at whiteboard"
+    caption="Kubernetes Manifests"
+>}}
+
 ## Components
 
 I've worked with many different tech stacks, both front end and back end, among them being NodeJS, Rust, Python, and __.NET.__ I've decided to focus on .NET for this series and for my own distributed applications because I feel like it strikes the right balance between performance, maturity, features, flexibility, etc... I also like that .NET does impose some opinionated patterns on developers which is good for consistency and I believe helps enterprises as their dev teams grow when they are growing beyond the start-up phase.

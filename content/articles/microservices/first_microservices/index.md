@@ -97,6 +97,12 @@ Good, now we can differentiate our services based on their response when we test
 
 ## Create Kubernetes Manifests
 
+{{< figure
+    src="shipping_manifest_1.png"
+    alt="Shipping Manifest"
+    caption="Kubernetes Manifests"
+>}}
+
 Before we can initialize skaffold, we have to create K8S manifests. Since we will be using `Helm` to deploy our applications to K8S, we will create one Helm chart for each service. Helm then renders these charts to regular K8S manifests later.
 
 Feel free to keep these K8S manifests wherever you want, but I will keep them in a folder called `K8S/Helm` that will be a peer of the folders containing each application. I will then add this folder to my current solution. The process for doing this while working in Rider is as follows (note that commands from command line are for unix operating systems):
@@ -162,6 +168,12 @@ image:
 ```
 
 With this in place, we have enough to initialize `Skaffold`.
+
+{{< figure
+    src="creating_scaffold_2.png"
+    alt="erecting a scaffold"
+    caption="Skaffolding"
+>}}
 
 ## Initialize Skaffold
 
@@ -237,6 +249,13 @@ deploy:
 ```
 
 Try `skaffold dev` again -- more errors 🫠
+
+{{< figure
+    src="scaffold_attack.png"
+    alt="More skaffold errors"
+    caption="More skaffold errors!"
+>}}
+
 
 ### Fixing Helm Charts
 
