@@ -384,3 +384,18 @@ We can turn off these warnings by disabling the HttpsRedirect that was enabled b
 In `Program.cs` comment out `app.UseHttpsRedirection()` and we are done!
 
 ![disable https redirection](image-16.png)
+
+## Next Steps
+
+We now have a (local) Kubernetes cluster, two (benign) services, Helm charts for our resources, and skaffold up and running, configured to work with Helm. The work we've put in will pay dividends later as we dig into business logic and add more services, but we still have ground work to do.
+
+We currently have no way to access our services from outside the cluster. Next we will:
+
+- Deploy `ingress-nginx` into our local cluster
+- Add a BFF service (reverse proxy) implemented for a `web` frontend with YARP
+  - Right now, we don't have any requests to aggregate, so this will just be a reverse proxy for now
+  - Having this infrastructure in place will allow us to extend it later on with lower overhead
+
+After we do this, we can test a couple of API requests to our services, then we can mesh them with linkerd!
+
+Let's dive in!
