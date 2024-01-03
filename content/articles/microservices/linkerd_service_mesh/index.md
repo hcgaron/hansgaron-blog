@@ -1,11 +1,11 @@
 ---
 title: "Linkerd and mTLS or: How I Learned to Stop Worrying and Love the Mesh"
 date: 2023-12-31
-draft: false
+draft: true
 description: "Installing the linkerd cli, generating necessary certificates for mTLS, and deploying linkerd using helm and skaffold for our service mesh"
 tags: ["microservices", "distributed", ".NET", "dotnet", "linkerd", "service-mesh"]
 series: ["microservices"]
-series_order: 5
+series_order: 6
 ---
 
 Our hero is entering the world of mesh. Ahead lies secure inter-service communications via mTLS, sidecar proxies, pod injection... let's dive in.
