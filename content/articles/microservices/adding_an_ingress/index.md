@@ -127,7 +127,14 @@ spec:
 
 This will allow us to make requests which will be directly served by our services. Let's test this in a minute, but first -- let's re-organize skaffold files into __modules__.
 
-### SKAFFOLD BUG ALERT
+### ~~SKAFFOLD BUG ALERT~~
+{{< typeit 
+  tag=h3
+  lifeLike=true
+  loop=true
+>}}
+Just kidding, it's a feature
+{{< /typeit >}}
 
 {{< figure
     src="skaffold_bug_cropped.png"
@@ -135,10 +142,15 @@ This will allow us to make requests which will be directly served by our service
     caption="Skaffold Bug Warning!"
 >}}
 
-{{< alert icon="triangle-exclamation" cardColor="#FFCC22" iconColor="#000000" textColor="#000000" >}}
-During writing of this blog, I've discovered a [bug with skaffold modules](https://github.com/GoogleContainerTools/skaffold/issues/9233). As a result, a lot of the configuration we are doing now is kind of pointless... *sigh*. But, when this bug is fixed, this is the right way to manage multiple configurations.
 
-Since we are only dealing with one (local) environment at the moment, this will be ok. But when it comes time to deploy this bug needs fixing or we will need to take a different approach. Fingers crossed Google fixes this bug. Please [bump the gihub issue](https://github.com/GoogleContainerTools/skaffold/issues/9233) to give it some extra traction.
+
+{{< alert icon="triangle-exclamation" cardColor="#FFCC22" iconColor="#000000" textColor="#000000" >}}
+During writing of this blog, I've discovered a ~~bug with skaffold modules~~[undocumented feature of Skaffold modules](https://github.com/GoogleContainerTools/skaffold/issues/9233). As a result, a lot of the configuration we are doing now doesn't work until the next article... sorry about that. I came back to update this article but it was too intrusive.
+
+If you are interested, [see the github issue](https://github.com/GoogleContainerTools/skaffold/issues/9233) and the response to learn that *Skaffold modules can't create a default deployer, so we need to [instruct how to install our rawYaml files](https://skaffold.dev/docs/deployers/kubectl/#example)*. 
+
+I could have re-worked this article, but this blog is a chronicle -- and like any real project, these things will happen... so enjoy the ride with me and now we know that Skaffold modules will not select a default deployer, so you *must define a deployer in your module `deploy.*`* section.
+
 {{< /alert >}}
 
 ## Reorgainze Skaffold Into Modules
@@ -399,7 +411,7 @@ deploy:
 
 What we just did, if skaffold's bug is fixes soon, was split our skaffold yaml into different profiles (for each environment) and different modules. We have a `common` module for pieces that will apply to all environments.
 
-Unfortunately, due to the bug in skaffold right now, raw manifests aren't getting deployed, so we can't really make use of this setup yet. So, we are still deploying from our main `skaffold/skaffold.yaml`, but we will move forward with this setup when the skaffold bug is fixed.
+Unfortunately, ~~due to the bug in skaffold right now~~ due to my misunderstanding of how Skaffold modules work -- and an undocumented behavior, raw manifests aren't getting deployed, so we can't really make use of this setup yet. So, we are still deploying from our main `skaffold/skaffold.yaml`, but we will move forward with this setup ~~when the skaffold bug is fixed~~ in the next article.
 
 ## New skaffold dev command
 
