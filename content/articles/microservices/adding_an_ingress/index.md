@@ -1,5 +1,5 @@
 ---
-title: "Deploying and Ingress and Reverse Proxy"
+title: "Deploying an Ingress and Reverse Proxy"
 date: 2023-12-30
 draft: false
 description: "Deploy an ingress into our local Kubernetes cluster using Helm and Skaffold, then deploy a reverse proxy that will be the foundation for a BFF (backend for frontend) for our WEB application."
