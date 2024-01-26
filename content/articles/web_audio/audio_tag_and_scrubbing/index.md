@@ -185,8 +185,10 @@ We simplified things for our use case:
 
 ## Next Steps
 
-The next one might be the last one, but we still have one thing that might be useful. We want to be able to `cue` animations along a timeline, and we might not want our animations to be the full length of the audio file! (That second point is sort of an implementation detail... but from the user's perspective, perhaps something will only happen visually during a small part of the audio file).
+We still have one thing that might be useful. We want to be able to `cue` animations along a timeline, and we might not want our animations to be the full length of the audio file! (That second point is sort of an implementation detail... but from the user's perspective, perhaps something will only happen visually during a small part of the audio file).
 
-To achieve this we will pull in a dependency to make our lives much easier; because drawing all these animation frames in real time is a lot on the wrist!
+We also might want some kind of DSL or api to define animations to be added to our timeline. We can use this to abstract away the implementation detail of all this logic from any UI we build. 
+
+Then, inevitably, we will have to think about performance. We will explore a couple of ideas to improve the performance of our current approach, then we can look at some off the shelf solutions. To achieve this we will pull in a dependency to make our lives much easier; because drawing all these animation frames in real time is a lot on the wrist!
 
 Let's do it!
